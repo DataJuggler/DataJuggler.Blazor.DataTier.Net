@@ -1,0 +1,111 @@
+﻿@namespace DataJuggler.Blazor.DataTier.Net.Components
+@using DataJuggler.UltimateHelper
+@using DataJuggler.Blazor.Components 
+
+<div class="signupcontainer">
+    <div class="signupcontrols">
+        Sign Up For Free
+        <div class="bigline"></div>
+
+        <ValidationComponent Name="UserNameComponent" Parent=this
+            Caption="User Name" IsRequired="true" MinimumLength="5"
+            MaximumLength="20" IsUniqueCallbackRequired="true" LabelColor="GhostWhite"
+            ValidationMessage="User Name Must Be Between 5 And 20 Characters">
+        </ValidationComponent> 
+        <ValidationComponent Name="FirstNameComponent" Parent=this
+            Caption="First Name" IsRequired="false" MaximumLength="24" LabelColor="GhostWhite"
+            IsUniqueCallbackRequired="false">
+        </ValidationComponent>
+        <ValidationComponent Name="LastNameComponent" Parent=this
+            Caption="Last Name" IsRequired="false" MaximumLength="24" LabelColor="GhostWhite"
+            IsUniqueCallbackRequired="false">
+        </ValidationComponent>
+        <ValidationComponent Name="EmailAddressComponent" Parent=this
+            IsUniqueCallbackRequired="true" Caption="Email Address" MaximumLength="80" LabelColor="GhostWhite"
+            IsRequired="true" ValidationMessage="You must enter a valid email address">
+        </ValidationComponent>
+        <ValidationComponent Name="PasswordComponent" Parent=this
+            Caption="Password" IsRequired="true" MaximumLength="20" LabelColor="GhostWhite"
+            MinimumLength="8" IsUniqueCallbackRequired="false"
+            PasswordMode="true" ValidationMessage="You must enter a password.">
+        </ValidationComponent>
+        <ValidationComponent Name="ConfirmPasswordComponent" Parent=this
+            Caption="Confirm Password" IsRequired="true" MaximumLength="20" LabelColor="GhostWhite"
+            MinimumLength="8" IsUniqueCallbackRequired="false"
+            PasswordMode="true" ValidationMessage="You must enter a confirm password.">
+        </ValidationComponent>
+    </div>
+    <div class="signupbuttons">
+        <button class="redbutton2" @onclick="SignUp">
+            <span class="moveup">Sign Up</span>
+        </button>
+        <button class="redbutton2" @onclick="Cancel">
+            <span class="moveup">Cancel</span>
+        </button>
+    </div>
+    <div class="rightpanelsignup">
+        <div class="signupcontrols moveup2">
+            Why Sign Up?<br />
+        </div>
+        <ul class="signuplist">
+            Post your videos and links to your channel. 
+        </ul>
+        <ul class="signuplist">
+            Meet other YouTubers, and find content that is hidden by YouTube algorithms.
+        </ul>
+        <ul class="signuplist">
+            Get more views and grow your channel. Get feedback from other YouTubers
+        </ul>
+        <ul class="signuplist">
+            It help me to decide if it is worth it to continue to pay for this site.
+        </ul>
+        <div class="bigline"></div>
+        <div class="signupcontrols movedown2">
+            Bandwitdth charges are not free, so please donate today.<br />
+        </div>
+        <div class="bigline"></div>
+        <ul class="signuplist">
+            If you can spare any amount, please consider making a donation as I pay for this site
+            out of my own pocket and I am currently not working (very much).
+        </ul>
+        <ul class="signuplist">
+            Please subscribe to my YouTube channel as I created this site for this very purpose.
+        </ul>
+        <div class="smallline"></div>
+        <div class="movedown19">
+            <div class="signupcontrols">
+                Privacy Policy<br />
+            </div>
+            <ul class="signuplist">
+                I will never sell your information to anyone for any reason, for less than 1 million dollars.
+            </ul>
+        </div>
+    </div>
+</div>
+@if (TextHelper.Exists(ValidationMessage))
+{
+    <div class="validationmessage2">
+        @ValidationMessage
+    </div>
+ }
+ 
+ @if (ShowProgress)
+ { 
+     <div class="progresscontainer2">
+         <div class=@ProgressStyle>
+            <span class="text-white">@PercentString</span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+     </div>
+}
+ <Sprite Subscriber=this Visible="true" Interval="50" Position="fixed" 
+         XPosition="-200" YPosition="-200" Width="100" Height="100">
+ </Sprite>
+
+
+
+
+                   

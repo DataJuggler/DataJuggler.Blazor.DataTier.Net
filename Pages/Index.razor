@@ -1,0 +1,69 @@
+﻿@page "/"
+@page "/Index"
+@using DataJuggler.Blazor.FileUpload
+@using ObjectLibrary.Enumerations
+@using DataJuggler.UltimateHelper
+@using DataJuggler.Blazor.Components
+@using DataJuggler.Blazor.Components.Enumerations
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage 
+@implements IDisposable
+@inject IJSRuntime JSRuntime
+@inject ProtectedLocalStorage ProtectedLocalStore
+@inject NavigationManager NavigationManager
+@using DataJuggler.Blazor.DataTier.Net.Components
+
+<div class="logoimage"></div>
+<div class="logo"></div>
+<div class="slogan"></div>
+<div class="version">Version 1.0.0.0</div>
+
+<div class="rightpanel">
+    @if (HasLoggedInMember)
+    {
+        <div class="welcome">Welcome @LoggedInMember.UserName</div>
+        <button class="redbutton3">
+        <span class="" @onclick="SignOutButton_Click">Sign Out</span>
+        </button>
+    }
+    else
+    { 
+        <button class="redbutton">
+            <span class="" @onclick="LoginButton_Click">Login</span>
+        </button>
+         <button class="redbutton">
+            <span class="" @onclick="SignUpButton_Click">Join Free</span>
+        </button>
+    }
+</div>
+
+@if (ScreenType == ScreenTypeEnum.Login)
+{
+    <Login Parent=this></Login>
+}
+else if (ScreenType == ScreenTypeEnum.SignUp)
+{
+    <Join Parent=this></Join>
+}
+else
+{  
+    @if (TextHelper.Exists(ValidationMessage))
+    { 
+        <div class="validationmessage">@ValidationMessage</div>
+    }
+    else
+    {
+        <div class="uploadinstructions">@WelcomeMessage</div>
+    }
+}
+
+<div class="progresscontainer3">
+    <ProgressBar Subscriber=this Increment="0" Interval="125" ClientHandledIncrement="true" 
+         CloseAtExtraPercent="0" Visible="@ShowProgress" Theme=ThemeEnum.Dark Color=ColorEnum.Orange
+         Size=SizeEnum.Small OverrideThemeColorForText="true" TextColor="White">
+    </ProgressBar>
+</div>
+ 
+
+
+
+

@@ -1,0 +1,289 @@
+ @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+body 
+{
+    background-image: url('../images/BlueWaterBackground.png');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    overflow: hidden;
+}
+.logincontainer
+{
+    background-image: url('../Images/LoginScreen.png');
+    width: 80%;
+    height: 64vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 20vh;
+    left: 24%;
+}
+.progresscontainer
+{
+    position: fixed;
+    left: 24%;
+    top: 50vh;
+    transform: scale(.8);
+    transform-origin: left;
+}
+.progresscontainer2
+{
+    position: fixed;
+    left: 20%;
+    top: 64vh;
+    transform: scale(1);
+    transform-origin: left;
+}
+.progresscontainer3
+{
+    position: fixed;
+    left: 67.2%;
+    top: 72.8vh;
+    width: 8%;
+    height: 12vh;    
+    transform: scale(1);
+    transform-origin: left;
+}
+.redbutton
+{
+    background-image: url('../images/redbutton.png'); 
+    display: inline;
+    outline: none;
+    border: none;
+    background-size: 100% 100%;
+    width: 48%;
+    height: 5.28vh;
+    display: inline;
+    color: ghostwhite;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-align: center;
+    font-family: Arial;
+    line-height: 2.4vh;
+    vertical-align: central;
+    font-size: 2vh;
+    position: relative;
+    top: 1.2vh;
+    left: 6%;
+}
+.redbutton:focus
+{
+    outline: none;
+}
+.redbutton:hover
+{
+    text-decoration: none;
+}
+.redbutton2
+{
+    background-image: url('../images/redbutton.png'); 
+    display: inline;
+    outline: none;
+    border: none;
+    background-size: 100% 100%;
+    width: 12%;
+    height: 5.28vh;
+    display: inline;
+    color: ghostwhite;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-align: center;
+    font-family: Arial;
+    line-height: 2.4vh;
+    vertical-align: central;
+    font-size: 2vh;
+    position: relative;
+    top: 3.6vh;
+    left: 24.8%;
+}
+.redbutton2:focus
+{
+    outline: none;
+}
+.redbutton2:hover
+{
+    text-decoration: none;
+}
+.redbutton3
+{
+    background-image: url('../images/redbutton.png'); 
+    display: inline;
+    outline: none;
+    border: none;
+    background-size: 100% 100%;
+    width: 10%;
+    height: 5.28vh;
+    display: inline;
+    color: ghostwhite;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-align: center;
+    font-family: Arial;
+    line-height: 2.4vh;
+    vertical-align: central;
+    font-size: 2vh;
+    position: fixed;
+    top: 9.6vh;
+    right: 2%;
+}
+.redbutton3:focus
+{
+    outline: none;
+}
+.redbutton3:hover
+{
+    text-decoration: none;
+}
+.rightpanel
+{
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 24%;
+    height: 92vh;
+}
+.rightpanelsignup
+{
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 40%;
+    height: 24vh;
+    position: fixed;
+    left: 54%;
+    top: 20vh;
+    line-height: 2.4vh;
+    font-size: 1.8vh;
+    color: ghostwhite;
+}
+.signupbuttons
+{
+    position: relative;
+    left: -11%;
+}
+.signupcontainer
+{
+    width: 80%;
+    height: 64vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 20vh;
+    left: 16%;
+}
+.signupcontrols
+{
+    line-height: 3.2vh;
+    font-size: 2.4vh;
+    font-family: Arial, Verdana;
+    color: ghostwhite;
+    margin-top: 2vh;
+    margin-left: 2%;
+}
+.validationmessage
+{
+    position: fixed;
+    top: 60vh;
+    width: 60%;
+    left: 50%;
+    margin-left: -30%;
+    color: red;
+    height: 4vh;
+    line-height: 4vh;
+    font-size: 1.6em;
+    text-align: center;
+}
+.validationmessage2
+{
+    position: fixed;
+    bottom: 10vh;
+    width: 80%;
+    left: 4%;
+    color: red;
+    height: 4vh;
+    line-height: 4vh;
+    font-size: 1.6em;
+    text-align: center;
+    color: darkorange;
+}
+.version
+{
+    float: right;
+    color: ghostwhite;
+    position: fixed;
+    right: 2.4%;
+    top: 1vh;
+    text-align: right;
+    font-size: 1em;
+}
+.welcome
+{
+    display: inline-block;
+    color: ghostwhite;
+    height: 2vh;
+    width: 30%;
+    line-height: 2vh;
+    font-size: 1.2em;
+    text-align: right;
+    position: fixed;
+    top: 6vh;
+    right: 2.4%;
+    white-space: nowrap;
+}
+
+html, {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: ghostwhite;
+    font-size: 1em;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
